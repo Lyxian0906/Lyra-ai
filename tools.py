@@ -26,6 +26,51 @@ def get_project_status(project_name: str) -> str:
         f"No status recorded yet for '{project_name}'. Ask Lyx to fill you in!"
     )
 
+def get_lyx_info(info_type: str) -> str:
+    """Returns known personal information about Lyx.
+
+    Args:
+        info_type: The type of information to look up. One of:
+            "about", "studies", "skills", "languages", "interests", "goals".
+    """
+    lyx_info = {
+        "about": (
+            "Lyx is a 20 years developer from Asturias, Spain, who enjoys programming, "
+            "game development, web development, and learning new technologies."
+        ),
+
+        "studies": (
+            "Lyx is studying a Higher Vocational Training program in "
+            "Multiplatform Application Development (DAM)."
+        ),
+
+        "skills": (
+            "Lyx has experience with Java, Python, C#, HTML, CSS, JavaScript, "
+            "SQL, Unity, Git, GitHub, Firebase, and AWS."
+        ),
+
+        "languages": (
+            "Lyx speaks Spanish and English and is also learning Korean and Japanese."
+        ),
+
+        "interests": (
+            "Lyx enjoys programming, videogames, game development, web "
+            "development, Harry Potter, Zelda, and learning languages."
+        ),
+
+        "goals": (
+            "Lyx wants to improve as a developer, build interesting portfolio "
+            "projects, gain practical experience, and continue learning "
+            "software development and AI."
+        ),
+    }
+
+    key = info_type.strip().lower()
+
+    return lyx_info.get(
+        key,
+        f"No personal information is recorded for '{info_type}'."
+    )
 
 # Add new tools here as plain functions with type hints + a docstring —
 # the SDK reads both to know when and how to call them. Then add the
