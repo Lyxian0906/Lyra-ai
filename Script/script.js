@@ -57,7 +57,7 @@ function sendMessage() {
         })
         .catch(() => {
             removeTyping();
-            addMessage("Lyra couldn't reach the server. Check the connection and try again.", "ai");
+            addMessage("Lyx AI couldn't reach the server. Check the connection and try again.", "ai");
         });
 }
  
