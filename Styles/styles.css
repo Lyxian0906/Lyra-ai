@@ -1,3 +1,6 @@
+    
+ /*DEFAULT COLOR TEMPLATE BY LYX*/   
+
     :root {
         --bg-deep: #090b1c;
         --bg-surface: #12152c;
@@ -30,13 +33,13 @@
         position: relative;
     }
  
-    /* ambient starfield + aurora glow */
     #stars {
         position: fixed;
         inset: 0;
         z-index: 0;
     }
  
+   /*The background thing*/ 
     .aurora {
         position: fixed;
         border-radius: 50%;
