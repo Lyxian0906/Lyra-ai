@@ -15,8 +15,8 @@ app = Flask(__name__, template_folder="templates")
 
 HISTORY_FILE = "conversation.json"
 
-
-
+# Add new functions to tools.py, then list them here.
+LYRA_TOOLS = [get_current_time, get_project_status]
 
 def load_history():
     if os.path.exists(HISTORY_FILE):
