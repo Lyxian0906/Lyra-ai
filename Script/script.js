@@ -110,3 +110,12 @@ function removeTyping() {
 document.getElementById("messageInput").addEventListener("keydown", (e) => {
     if (e.key === "Enter") sendMessage();
 });
+
+//New chat
+async function resetChat() {
+    await fetch("/reset", { method: "POST" });
+    document.getElementById("messages").innerHTML = "";
+    addMessage("New chat started. What's on your mind?", "ai");
+}
+
+document.getElementById("resetBtn").addEventListener("click", resetChat);

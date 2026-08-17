@@ -262,3 +262,19 @@
     @media (prefers-reduced-motion: reduce) {
         .row, .typing span { animation: none !important; }
     }
+
+/*Reset chat button*/
+    .reset-btn {
+    background: none;
+    border: 1px solid var(--line);
+    color: var(--text-dim);
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: border-color 0.2s, color 0.2s;
+}
+.reset-btn:hover {
+    border-color: var(--violet-soft);
+    color: var(--text);
+}
