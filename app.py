@@ -5,7 +5,7 @@ from flask import Flask, render_template, request, jsonify, send_from_directory
 from google import genai
 from google.genai import types
 from persona import SYSTEM_PROMPT
-from tools import get_current_time, get_project_status
+from tools import get_current_time, get_project_status, get_lyx_info
 
 load_dotenv()
 
@@ -18,7 +18,7 @@ app = Flask(__name__, template_folder="templates")
 HISTORY_FILE = "conversation.json"
 
 # Add new functions to tools.py, then list them here.
-LYRA_TOOLS = [get_current_time, get_project_status]
+LYRA_TOOLS = [get_current_time, get_project_status, get_lyx_info]
 
 def load_history():
     if os.path.exists(HISTORY_FILE):
