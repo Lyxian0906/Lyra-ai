@@ -1,4 +1,4 @@
-# Lyra AI ✨
+# Lyx AI ✨
 
 A personal AI chat assistant built with Flask and Google's Gemini API. Lyra remembers your conversation, has a customizable personality, and can call tools to answer questions more accurately.
 
