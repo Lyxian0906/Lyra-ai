@@ -5,6 +5,7 @@ from flask import Flask, render_template, request, jsonify, send_from_directory
 from google import genai
 from google.genai import types
 from persona import SYSTEM_PROMPT
+from tools import get_current_time, get_project_status
 
 load_dotenv()
 
@@ -13,6 +14,7 @@ client = genai.Client(api_key=api_key)
 
 app = Flask(__name__, template_folder="templates")
 
+#Chat hisotry
 HISTORY_FILE = "conversation.json"
 
 # Add new functions to tools.py, then list them here.
