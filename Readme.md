@@ -1,4 +1,4 @@
-# Lyx AI ✨
+# Lyra AI ✨
 
 A personal AI chat assistant built with Flask and Google's Gemini API. Lyra remembers your conversation, has a customizable personality, and can call tools to answer questions more accurately.
 
@@ -87,6 +87,17 @@ Open **http://127.0.0.1:5000** in your browser. (Opening `index.html` directly a
 2. Import it in `app.py` and add it to the `LYRA_TOOLS` list.
 
 That's the whole process — no manual schema writing needed.
+
+## Learn how this works
+
+The `docs/` folder has a set of guides for understanding this project (and
+building your own version) in depth:
+
+1. [docs/01-architecture.md](./docs/01-architecture.md) — how all the pieces fit together
+2. [docs/02-backend-explained.md](./docs/02-backend-explained.md) — `app.py`, `persona.py`, `tools.py` walked through
+3. [docs/03-frontend-explained.md](./docs/03-frontend-explained.md) — `index.html`, `script.js`, `styles.css` walked through
+4. [docs/04-build-your-own.md](./docs/04-build-your-own.md) — a from-scratch build order, step by step
+5. [docs/05-next-steps.md](./docs/05-next-steps.md) — a roadmap of what to add next, easy to hard
 
 ## Notes
 
