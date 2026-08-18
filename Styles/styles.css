@@ -1,6 +1,7 @@
     
  /*DEFAULT COLOR TEMPLATE BY LYX*/   
 
+ /*Color variables(They suck a little)*/
     :root {
         --bg-deep: #090b1c;
         --bg-surface: #12152c;
@@ -32,7 +33,7 @@
         overflow: hidden;
         position: relative;
     }
- 
+ /*Maybe change it at some point*/
     #stars {
         position: fixed;
         inset: 0;

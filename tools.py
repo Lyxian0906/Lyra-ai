@@ -15,10 +15,11 @@ def get_project_status(project_name: str) -> str:
             "portfolio", "floopychicken", "the fading star", "library manager".
     """
     projects = {
-        "portfolio": "Personal portfolio site at lyx.dev, repo: github.com/Lyxian0906/PortFolio.",
+        "portfolio": "Personal portfolio site called lyx.dev, repo: github.com/Lyxian0906/PortFolio.",
         "floopychicken": "A Flappy Bird-style 2D game built in Unity/C#.",
         "the fading star": "An early-stage prototype game concept.",
         "library manager": "A book recommendation website.",
+        "lyx AI": "Personal assistant boosted by Gemini API, keeps evolving and learning new things to make the user experience better ",
     }
     key = project_name.strip().lower()
     return projects.get(
@@ -36,12 +37,12 @@ def get_lyx_info(info_type: str) -> str:
     lyx_info = {
         "about": (
             "Lyx is a 20 years developer from Asturias, Spain, who enjoys programming, "
-            "game development, web development, and learning new technologies."
+            "game development, web development, and learning new technologies. She loves colorful things"
         ),
 
         "studies": (
             "Lyx is studying a Higher Vocational Training program in "
-            "Multiplatform Application Development (DAM)."
+            "Multiplatform Application Development (DAM). Also doing AI courses"
         ),
 
         "skills": (
@@ -55,7 +56,7 @@ def get_lyx_info(info_type: str) -> str:
 
         "interests": (
             "Lyx enjoys programming, videogames, game development, web "
-            "development, Harry Potter, Zelda, and learning languages."
+            "development, Harry Potter, Drawing, Zelda, and learning languages. And she is a big fan of dicovering new lands, she loves lo travel"
         ),
 
         "goals": (
@@ -66,6 +67,8 @@ def get_lyx_info(info_type: str) -> str:
     }
 
     key = info_type.strip().lower()
+
+#When tha AI donesn't have this info this message will pop 
 
     return lyx_info.get(
         key,
