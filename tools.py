@@ -20,6 +20,8 @@ def get_project_status(project_name: str) -> str:
         "the fading star": "An early-stage prototype game concept.",
         "library manager": "A book recommendation website.",
         "lyx AI": "Personal assistant boosted by Gemini API, keeps evolving and learning new things to make the user experience better ",
+        "Air Quality Analysis Dashboard": "A data analysis project focused on monitoring and visualizing air quality information. Built using SQL, ETL processes, and Power BI to transform raw environmental data into interactive dashboards and meaningful insights.",
+        
     }
     key = project_name.strip().lower()
     return projects.get(
