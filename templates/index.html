@@ -19,7 +19,32 @@
 
 		<div class="chat">
 			<div class="header">
-                <button id="resetBtn" class="reset-btn" title="Start a new chat">↺ New chat</button>
+				<button id="resetBtn" class="reset-btn" title="Start a new chat">
+					↺ New chat
+				</button>
+				<button
+					id="deleteMemoryBtn"
+					class="delete-btn"
+					title="Permanently delete all memory"
+				>
+					🗑 Delete memory
+				</button>
+
+				<div id="deleteModal" class="modal-overlay hidden">
+					<div class="modal-box">
+						<h3>Delete all memory?</h3>
+						<p>
+							This permanently erases everything Lyra remembers. This can't be
+							undone.
+						</p>
+						<div class="modal-actions">
+							<button id="cancelDeleteBtn" class="modal-cancel">Cancel</button>
+							<button id="confirmDeleteBtn" class="modal-confirm">
+								Yes, delete everything
+							</button>
+						</div>
+					</div>
+				</div>
 				<div class="header-top">
 					<svg class="mark" viewBox="0 0 40 40" fill="none">
 						<defs>

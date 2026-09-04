@@ -119,3 +119,25 @@ async function resetChat() {
 }
 
 document.getElementById("resetBtn").addEventListener("click", resetChat);
+
+
+/*Delete all button*/
+const deleteMemoryBtn = document.getElementById("deleteMemoryBtn");
+const deleteModal = document.getElementById("deleteModal");
+const cancelDeleteBtn = document.getElementById("cancelDeleteBtn");
+const confirmDeleteBtn = document.getElementById("confirmDeleteBtn");
+
+deleteMemoryBtn.addEventListener("click", () => {
+    deleteModal.classList.remove("hidden");
+});
+
+cancelDeleteBtn.addEventListener("click", () => {
+    deleteModal.classList.add("hidden");
+});
+
+confirmDeleteBtn.addEventListener("click", async () => {
+    await fetch("/delete_memory", { method: "POST" });
+    document.getElementById("messages").innerHTML = "";
+    deleteModal.classList.add("hidden");
+    addMessage("All memory deleted. This is a completely fresh start.", "ai");
+});

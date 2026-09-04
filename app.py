@@ -87,6 +87,12 @@ def reset():
     save_history([])
     return jsonify({"status": "cleared"})
 
+#Delete the file of memory, fully, different than reset that only delets the chat but not the memories
+@app.route("/delete_memory", methods=["POST"])
+def delete_memory():
+    if os.path.exists(HISTORY_FILE):
+        os.remove(HISTORY_FILE)
+    return jsonify({"status": "deleted"})
 
 if __name__ == "__main__":
     app.run(debug=True)
